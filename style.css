@@ -331,7 +331,7 @@ section .title::after{
 /* skills section styling */
 
 .skills .title::after{
-    content: "what i know";
+    content: "What i know";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -412,10 +412,13 @@ section .title::after{
 .edu .title::before{
     background: #fff;
 }
-.proj .title::after,
+.proj .title::after{
+    background: #111;
+    content: "What i worked on";
+}
 .edu .title::after{
     background: #111;
-    content: "what i worked on";
+    content: "From School to now";
 }
 .proj .serv-content .card{
     width: calc(33% - 20px);
