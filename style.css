@@ -35,11 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .proj, .skills, .edu, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.proj .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -190,6 +190,7 @@ section .title::after{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    animation: glow1 2s ease-in-out infinite alternate;
 }
 .home .home-content .text-3{
     font-size: 40px;
@@ -259,52 +260,73 @@ section .title::after{
     color: #315D73;
     background: none;
 }
+.about .about-content .right .text  {
+    animation: glow 2s ease-in-out infinite alternate;}
+
 
 /* education section styling */
-.services, .teams{
-    color:#fff;
-    background: #111;
+.edu .title::after{
+    content: "school to now";
 }
-.services .title::before,
-.teams .title::before{
-    background: #fff;
-}
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "what i studied";
-}
-.services .serv-content .card{
-    width: calc(33% - 20px);
+.edu .carousel .card{
     background: #222;
-    text-align: center;
     border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.edu .carousel .card:hover{
     background: #315D73;
 }
-.services .serv-content .card .box{
+.edu .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.edu .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card i{
-    font-size: 50px;
-    color: #315D73;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
+.edu .carousel .card .text{
+    font-size: 20px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+.edu .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #315D73;
+    transition: all 0.3s ease;
+}
+.edu .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #315D73!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: #315D73!important;
+}
+
 
 /* skills section styling */
 
@@ -372,77 +394,62 @@ section .title::after{
     width: 60%;
 }
 .skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
     width: 50%;
 }
-.skills-content .right .mysql::before{
+.skills-content .right .php::before{
     width: 70%;
 }
-
-/* teams section styling */
-.teams .title::after{
-    content: "what I've done";
+.skills-content .right .mysql::before{
+    width: 50%;
 }
-.teams .carousel .card{
+
+/* proj section styling */
+.proj, .edu{
+    color:#fff;
+    background: #111;
+}
+.proj .title::before,
+.edu .title::before{
+    background: #fff;
+}
+.proj .title::after,
+.edu .title::after{
+    background: #111;
+    content: "what i worked on";
+}
+.proj .serv-content .card{
+    width: calc(33% - 20px);
     background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
     text-align: center;
-    overflow: hidden;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.proj .serv-content .card:hover{
     background: #315D73;
 }
-.teams .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.proj .serv-content .card .box{
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.proj .serv-content .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.proj .serv-content .card i{
+    font-size: 50px;
+    color: #315D73;
+    transition: color 0.3s ease;
+}
+.proj .serv-content .card:hover i{
+    color: #fff;
+}
+.proj .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #315D73;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid #315D73!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: #315D73!important;
-}
+
+
 
 /* contact section styling */
 .contact .title::after{
@@ -556,6 +563,23 @@ footer span a:hover{
 
 
 /* responsive media query start */
+@keyframes glow {
+    from {
+      text-shadow: 0 0 20px #315D73;
+    }
+    to {
+      text-shadow: 0 0 30px #386a83, 0 0 10px #446f85;
+    }
+  }
+
+  @keyframes glow1 {
+    from {
+      text-shadow: 0 0 20px #04d9ff;
+    }
+    to {
+      text-shadow: 0 0 30px #13dcff, 0 0 10px #2bdfff;
+    }
+  }
 @media (max-width: 1104px) {
     .about .about-content .left img{
         height: 350px;
@@ -622,7 +646,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .proj .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -646,7 +670,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .proj .serv-content .card{
         width: 100%;
     }
 }
