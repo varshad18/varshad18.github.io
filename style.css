@@ -452,7 +452,13 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 .proj .a:link {
-  color: red;
+  color: white;
+}
+.proj .a:hover{
+    color:silver
+}
+.proj .a:visited{
+    color: aliceblue
 }
 
 
